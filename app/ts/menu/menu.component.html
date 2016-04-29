@@ -1,0 +1,12 @@
+<div class="menu">
+    <ul>
+        <li *ngFor="#item of menu" (click)="onSelect(item)" [class.selected]="item === selectedItem">
+            {{ item.title }}
+        </li>
+    </ul>
+
+    <div class="content">
+
+
+    </div>
+</div>

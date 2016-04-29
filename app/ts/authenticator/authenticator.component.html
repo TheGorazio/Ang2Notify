@@ -1,0 +1,42 @@
+<div class="auth-wrapper">
+    <div class="inner-wrapper">
+        <p class="error">{{errorMsg}}</p>
+        <form #authForm="ngForm" (ngSubmit)="onSubmit()">
+            <p>
+                <label>Email</label>
+                <input type="text"
+                       ngControl="email"
+                       [(ngModel)]="user.email"
+                       required
+                >
+            </p>
+            <p>
+                <label>Password</label>
+                <input type="password"
+                       ngControl="password"
+                       [(ngModel)]="user.password"
+                       required
+                >
+            </p>
+            <p *ngIf="state == 'SIGN_UP'">
+                <label>Confirm Password</label>
+                <input type="password"
+                       ngControl="confirm_password"
+                       [(ngModel)]="confirm_password"
+                       required
+                >
+            </p>
+            <div class="btns">
+                <button *ngIf="state == 'SIGN_IN'" class="sign in" type="submit">
+                    Sign In
+                </button>
+                <div *ngIf="state == 'SIGN_IN'" (click)="_onSignUp()" class="sign up">
+                    Sign Up
+                </div>
+                <button *ngIf="state == 'SIGN_UP'" class="sign in" type="submit">
+                    Sign Up
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

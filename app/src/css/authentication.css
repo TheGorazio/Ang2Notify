@@ -1,0 +1,66 @@
+.auth-wrapper {
+    box-sizing: border-box;
+
+    width: 70%;
+    height: 40%;
+    margin: 0 auto;
+    padding-top: 35px;
+
+    text-align: center;
+    transition: all 0.5s;
+}
+button {
+    border: none;
+    background: none;
+}
+.inner-wrapper {
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+
+}
+.inner-wrapper p {
+    width: 100%;
+}
+.inner-wrapper p label {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+}
+.inner-wrapper p input {
+    width: 250px;
+    font-size: 18px;
+}
+.inner-wrapper .sign {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+    cursor: pointer;
+}
+.inner-wrapper .sign:hover,
+.inner-wrapper .sign:focus,
+.inner-wrapper .sign:active {
+    color: #2176ff
+}
+.inner-wrapper .sign.in {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+
+.auth-wrapper .sign.up {
+    text-decoration: underline;
+    font-weight: normal;
+    float: right;
+    font-size: 14px;
+    margin-top: 16px;
+}
+.error {
+    color: red;
+    font-size: 16px;
+}
+
+input>label1:hover {
+    color: red;
+}
